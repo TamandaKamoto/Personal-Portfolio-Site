@@ -18,3 +18,9 @@
   --footer-text: #ffffff;
   --accent-color: #81c784;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
