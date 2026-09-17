@@ -100,3 +100,9 @@ h2 {
   text-align: center;
 }
 
+footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  text-align: center;
+  padding: 1rem;
+}
