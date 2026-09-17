@@ -9,3 +9,12 @@
   --font-family: Arial, sans-serif;
   --transition-speed: 0.3s;
 }
+
+[data-theme="dark"] {
+  --bg-primary: #0a1f11; 
+  --bg-secondary: #132a1a;
+  --text-color: #ffffff;
+  --footer-bg: #2b5731;
+  --footer-text: #ffffff;
+  --accent-color: #81c784;
+}
