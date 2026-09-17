@@ -32,3 +32,13 @@ body {
   line-height: 1.6;
   transition: background-color var(--transition-speed), color var(--transition-speed);
 }
+
+.hero-header {
+  background: url('hero-image.jpg') no-repeat center center/cover;
+  min-height: 250px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
