@@ -24,3 +24,11 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  transition: background-color var(--transition-speed), color var(--transition-speed);
+}
