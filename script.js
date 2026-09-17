@@ -14,4 +14,43 @@ document.addEventListener('DOMContentLoaded', () => {
     document.documentElement.setAttribute('data-theme', newTheme);
     localStorage.setItem('theme', newTheme);
   });
+
+  const contactForm = document.getElementById('contact-form');
+
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let isValid = true;
+
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
+    document.getElementById('name-error').textContent = '';
+    document.getElementById('email-error').textContent = '';
+    document.getElementById('message-error').textContent = '';
+
+    if (!nameInput.value.trim()) {
+      document.getElementById('name-error').textContent = 'Please enter your name.';
+      isValid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailInput.value.trim()) {
+      document.getElementById('email-error').textContent = 'Please enter your email address.';
+      isValid = false;
+    } else if (!emailPattern.test(emailInput.value.trim())) {
+      document.getElementById('email-error').textContent = 'Please enter a valid email address.';
+      isValid = false;
+    }
+
+    if (!messageInput.value.trim()) {
+      document.getElementById('message-error').textContent = 'Please enter your message.';
+      isValid = false;
+    }
+
+    if (isValid) {
+      alert('Thank you! Your message has been sent successfully.');
+      contactForm.reset();
+    }
+  });
 });
