@@ -1,0 +1,11 @@
+:root {
+  --bg-primary: #ffff99; 
+  --bg-secondary: #f0f080;
+  --text-color: #000000;
+  --footer-bg: #4a9155; 
+  --footer-text: #ffffff;
+  --accent-color: #2b5731;
+  --error-color: #d32f2f;
+  --font-family: Arial, sans-serif;
+  --transition-speed: 0.3s;
+}
