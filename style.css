@@ -160,3 +160,49 @@ input, textarea {
   text-decoration: none;
   text-align: center;
 }
+
+.error-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  text-align: center;
+}
+
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-heading {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.error-subtext {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-transform: lowercase;
+}
+
+.error-home-link {
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.error-home-link:hover,
+.error-home-link:focus {
+  opacity: 0.7;
+}
