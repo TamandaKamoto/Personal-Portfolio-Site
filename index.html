@@ -64,9 +64,116 @@
 
     <section id="article" class="section">
       <h2>Article</h2>
-      <article>
-        <h3>Understanding SCADA Systems</h3>
-        <p>SCADA (Supervisory Control and Data Acquisition) systems are basically industrial automation systems.</p>
+      <article class="technical-article" id="scada-systems">
+        <h2>Understanding SCADA Systems</h2>
+
+        <h3>1. What is a SCADA System?</h3>
+        <p>Supervisory Control and Data Acquisition (SCADA) systems represent
+           an essential integration of industrial hardware and software 
+           engineered to capture Operational Technology (OT) real-time data
+           and automate complex processes. In modern industrial facilities,
+           SCADA serves as the vital digital bridge connecting physical field 
+           equipment such as electric motors, pumps, sensors, and valves to 
+           centralized monitoring servers or edge platforms. By giving operators 
+           continuous visibility into machine operations and automated supervisory 
+           capabilities, SCADA empowers organizations to streamline workflows, 
+           optimize resource consumption, and minimize unplanned operational 
+           downtime across both local plants and geographically dispersed 
+           infrastructure.</p>
+
+        <p>At its core, a SCADA system fulfills four crucial business functions: 
+          controlling processes locally or remotely, capturing and analyzing 
+          real-time field data, enabling direct operator interaction with 
+          physical machinery, and archiving historical events for report 
+          generation and predictive compliance. Depending on the architecture, 
+          engineers can inspect system performance from an operator workstation 
+          overlooking a factory floor, an industrial Human-Machine Interface 
+          (HMI) mounted directly beside machinery, or remotely through secure 
+          enterprise network platforms.</p>
+
+        <h3>2. SCADA System Hardware and Architecture</h3>
+        <p>A physical SCADA ecosystem relies on a hierarchy of specialized 
+          computing hardware designed to survive harsh industrial environments 
+          while acquiring telemetry from field instruments. Primary sensors 
+          measure variables like temperature, pressure, fluid level, and 
+          vibration, passing signals to local execution hardware such as 
+          Remote Terminal Units (RTUs) and Programmable Logic Controllers 
+          (PLCs). PLCs and RTUs execute programmed automation logic directly 
+          at the site, triggering local actuators to adjust valves or toggle 
+          machinery based on real-time readings.</p>
+
+        <p>In modern SCADA architectures, raw sensor data collected by PLCs 
+          is aggregated by an industrial computer functioning as a gateway. 
+          Gateways pass telemetry from PLCs upstream to centralized servers 
+          or cloud environments. Edge computers situated close to data 
+          sources can also function as gateways while performing local 
+          processing on telemetry prior to cloud transmission. Processing 
+          workloads at the edge enables faster local decision-making, 
+          drastically reduces network bandwidth demands, and lowers cloud 
+          storage costs.</p>
+
+        <p>Local operator interaction is facilitated through Human-Machine 
+          Interfaces (HMIs) touchscreen computing units that display live 
+          schematics, equipment controls, and system alarms directly next 
+          to machinery. Downstream, a central SCADA server functions as 
+          the supervisory master unit. This server hosts the local historian 
+          database, which records time-series data over months or years, 
+          establishing the historical baseline needed for continuous 
+          optimization and trend analysis.</p>
+
+        <h3>3. Real-World Applications</h3>
+        <p><strong>Power Grid Automation by ESCOM:</strong> The Electricity 
+          Supply Corporation of Malawi (ESCOM) relies on SCADA technology to 
+          achieve real-time supervisory control and data acquisition across 
+          national electrical generation, transmission, and distribution 
+          networks. Through SCADA-connected Remote Terminal Units installed 
+          across hydro stations, major substations, and distribution 
+          transformers, ESCOM power dispatchers monitor line voltages, 
+          current loads, grid frequency, and transformer temperatures from 
+          central control rooms. When a lightning strike or short circuit 
+          occurs along a high-voltage transmission line, the SCADA system 
+          automatically detects the electrical fault, communicates with 
+          local protection relays, and isolates the damaged grid segment 
+          within milliseconds. This automated isolation protects 
+          multi-million-dollar substation transformers from catastrophic 
+          failure and enables ESCOM dispatchers to reroute power through 
+          healthy lines, reducing load shedding impact and shortening 
+          power restoration times for residential and commercial customers.</p>
+
+        <p><strong>Industrial Automation by Alliance One:</strong> Alliance 
+          One Tobacco utilizes advanced SCADA and PLC control architectures 
+          to automate large-scale agricultural leaf processing, conditioning, 
+          and drying operations. Within processing facilities, SCADA software 
+          coordinates a vast network of field sensors, conveyor drives, steam 
+          valves, and thermal regulation units across curing and conditioning 
+          lines. Precise temperature and moisture control is mandatory during 
+          leaf processing to maintain strict export quality standards. SCADA 
+          systems continuously sample humidity and thermal levels inside 
+          processing chambers, instructing PLCs to adjust steam injection 
+          valves and conveyor speeds automatically in response to 
+          micro-fluctuations. Furthermore, SCADA tracks automated weighing 
+          stations, providing plant managers with real-time throughput 
+          metrics, minimizing raw material waste, and facilitating predictive 
+          maintenance on heavy mechanical equipment to avoid costly processing 
+          bottlenecks during peak harvest seasons.</p>
+
+        <h3>4. Hybrid Control and Step-by-Step SCADA Implementation</h3>
+        <p>Modern SCADA deployments offer flexible hybrid control frameworks 
+          that balance automated rule execution with human oversight. Facilities 
+          can program systems to automatically handle emergency shutdowns during 
+          critical threshold breaches, while sending cautionary alerts for 
+          minor anomalies to human operators, who can then make informed 
+          operational decisions.</p>
+
+        <p>To successfully implement a SCADA solution, engineering teams should 
+          follow a structured roadmap: begin by clearly defining what physical 
+          assets need monitoring; audit existing data collection methods; start 
+          small by executing a Proof of Concept (POC) on one dataset at a single 
+          location; define a scalable system architecture; add industrial gateways 
+          to connect current equipment; centralize data to the intended monitoring 
+          server; map telemetry inside the chosen SCADA software; create clear HMI 
+          visualizations; and finally, establish automated rules and alert triggers 
+          to streamline long-term plant operations.</p>
       </article>
     </section>
 
