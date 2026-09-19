@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Page Not Found</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="error-body">
+  <main class="error-container">
+    <h1 class="error-heading">SORRY</h1>
+    <p class="error-subtext">page not found</p>
+    <a href="index.html" class="error-home-link">Return to Home</a>
+  </main>
 
+  <script>
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      document.documentElement.setAttribute('data-theme', savedTheme);
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+    }
+  </script>
+</body>
+</html>
