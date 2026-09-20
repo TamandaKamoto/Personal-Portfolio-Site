@@ -60,6 +60,159 @@
     <section id="projects" class="section">
       <h2>Projects</h2>
       <p>Here are some of the projects I have worked on:</p>
+      <article class="project-card">
+        <h3>1. Real-Time Riverine Flood Monitoring and Early Warning 
+            System for the Lower Shire (Work in progress)</h3>
+    
+        <div class="project-details">
+          <h4>Problem</h4>
+          <p>
+          Communities in the Lower Shire Valley of Malawi are extremely 
+          vulnerable to recurrent flooding that affects over 1,500 
+          households. Existing national solutions and satellite systems 
+          (such as Google Flood Hub) fail to capture localized, ground-
+          level hydrological conditions accurately. Without localized 
+          early detection, residents receive little to no advance 
+          warning, resulting in chaotic emergency evacuations, loss of 
+          human life, and destruction of property.
+          </p>
+
+          <h4>What Is Being Done</h4>
+          <p>
+          Designing and developing an off-grid, solar-powered embedded 
+          early warning system using an ESP32 microcontroller. Building 
+          firmware incorporating noise-reduction filtering and three-tier 
+          threshold alert logic (Advisory, Observe, Warning). Integrating 
+          multi-channel alerting capable of delivering SMS notifications 
+          to local residents in Chichewa, triggering local sirens and 
+          strobe lights, and logging live data to a web-based dashboard 
+          with historical trend analysis for disaster authorities.
+          </p>
+
+          <h4>Tools In Use</h4>
+          <ul>
+           <li><strong>Hardware:</strong> ESP32 Development Board, HC-SR04 
+               Ultrasonic Water Level Sensor, TSW-20M Turbidity Sensor, 
+               SIM800L GSM Module, 6W Solar Panel, 18650 Li-ion Battery Pack, 
+               LM2596 Voltage Regulator, TP4056 Battery Charger, Active Buzzer, 
+               LEDs, MOSFET.</li>
+           <li><strong>Software:</strong> Arduino IDE, Proteus, Visual Studio
+               Code.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <h3>2. Server Room Monitoring System</h3>
+    
+        <div class="project-details">
+          <h4>Problem</h4>
+          <p>
+          Server rooms host critical IT infrastructure vulnerable to 
+          environmental hazards such as elevated temperature, high 
+          humidity, smoke, and grid power outages. Unmonitored 
+          environmental spikes lead to thermal throttling, hardware 
+          degradation, catastrophic equipment failure, and costly 
+          operational downtime.
+          </p>
+
+          <h4>What Was Done</h4>
+          <p>
+          Simulated and prototyped an automated monitoring unit built around 
+          a Raspberry Pi 3 single-board computer. Developed a modular Python 
+          software architecture to poll environmental sensors, drive local 
+          actuators (fan cooling relay, buzzer alarm, status LEDs, I2C LCD), 
+          and execute a state machine for switching power to battery backup 
+          during grid outages. Built a cloud-backed PostgreSQL database on 
+          Supabase to log telemetry via HTTP REST and rendered a web dashboard 
+          with user authentication for remote administration.
+          </p>
+
+          <h4>Tools Used</h4>
+          <ul>
+            <li><strong>Hardware:</strong> Raspberry Pi 3 SBC, DHT22 
+                Temperature & Humidity Sensor, MQ-2 Gas/Smoke Sensor, I2C 16x2 
+                LCD Display, Dual Relay Modules, DC Fan & Load Motors, Red/Green 
+                Status LEDs, Active Buzzer, 9V Backup Battery, Voltage Dividers, 
+                PEF Board.</li>
+            <li><strong>Software:</strong> Thonny IDE, Wokwi Simulator, VS Code, 
+                Supabase PostgreSQL.</li>
+          </ul>
+
+          <h4>How It Went</h4>
+          <p>
+          The physical prototype passed fault testing across all target 
+          conditions. Exceeding temperature limits engaged the cooling 
+          fan within 5 seconds and sounded local alarms. Removing grid 
+          power triggered seamless switching to the 9V battery within the 
+          debounce window, and power restoration safely waited out a 15-
+          second stabilization period before reconnecting grid supply to 
+          protect relays. Telemetry posted reliably to the cloud every 30 
+          seconds.
+          </p>
+
+          <h4>What To Do Differently</h4>
+          <ul>
+            <li>Replace HTTP polling on the web dashboard with Supabase 
+              Realtime subscriptions for lower latency, push-based alerts
+            </li>
+            <li>Integrate SMS or email notifications (via Twilio or 
+              Supabase Edge Functions) to alert administrators instantly 
+              off-site during emergency events.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <h3>3. Automatic Greenhouse Monitoring System</h3>
+    
+        <div class="project-details">
+          <h4>Problem</h4>
+          <p>
+          Manually managing crop growth factors—such as temperature and 
+          soil moisture inside a greenhouse is labor-intensive and 
+          inaccurate. Inconsistent environmental control negatively 
+          affects crop health, yields, and water efficiency.
+          </p>
+
+          <h4>What Was Done</h4>
+          <p>
+          Designed, simulated and assembled a greenhouse model to maintain 
+          temperature and soil moisture levels automatically. Programmed an 
+          Arduino UNO microcontroller to continuously monitor soil moisture 
+          and temperature. Automated a DC water pump to irrigate soil when 
+          dry, operated a DC exhaust fan and motorized roof vents (using 
+          servo motors) to vent heat when temperatures rose, and transmitted 
+          real-time metrics directly to the farmer's smartphone.
+          </p>
+
+          <h4>Tools Used</h4>
+          <ul>
+            <li><strong>Hardware:</strong> Arduino UNO Microcontroller, 
+                DS18B20 Water-Resistant Temperature Sensor, Capacitive Soil 
+                Moisture Sensor, Relay Modules, 5V DC Water Pump, DC Cooling 
+                Fan, Servo Motors, Active Buzzer, HC-05 Bluetooth Module.</li>
+            <li><strong>Software:</strong> Arduino IDE, Cirkit Designer IDE.</li>
+          </ul>
+
+          <h4>How It Went</h4>
+          <p>
+          The prototype successfully automated climate regulation. When 
+          internal temperature reached 30°C or higher, the fan engaged and 
+          servo motors automatically opened the greenhouse roof vents to 
+          reduce heat. The capacitive sensor correctly triggered the water 
+          pump upon detecting dry soil, and sensor values streamed continuously 
+          to the mobile app over Bluetooth.
+          </p>
+
+          <h4>What To Do Differently</h4>
+          <ul>
+            <li>Replace the short-range HC-05 Bluetooth module with Wi-Fi 
+                or cellular/5G connectivity to permit long-distance remote 
+                monitoring when the farmer is far from the greenhouse.</li>
+          </ul>
+        </div>
+      </article>
     </section>
 
     <section id="article" class="section">
