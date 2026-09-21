@@ -370,6 +370,29 @@ footer {
   }
 }
 
+@media (min-width: 640px) {
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .btn {
+    width: auto;
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-links ul {
+    gap: 1.5rem;
+  }
+
+  .section,
+  #skills {
+    padding: 4.5rem 2.5rem;
+  }
+}
+
 @media (min-width: 1024px) {
   .nav-links ul {
     display: flex;
@@ -382,5 +405,17 @@ footer {
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.75rem;
+  }
+
+  .tagline {
+    font-size: 1.15rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
   }
 }
