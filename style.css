@@ -366,3 +366,35 @@ footer {
     align-self: flex-start;
   }
 }
+
+@media (min-width: 1024px) {
+  .nav-links,
+  .nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.75rem;
+  }
+
+  .tagline {
+    font-size: 1.15rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-card,
+  .technical-article {
+    padding: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+}
