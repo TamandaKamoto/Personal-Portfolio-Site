@@ -348,6 +348,30 @@
           maintenance on heavy mechanical equipment to avoid costly processing 
           bottlenecks during peak harvest seasons.</p>
 
+        <p><strong>Municipal Water Treatment and Distribution by Blantyre Water 
+           Board (BWB):</strong> Blantyre Water Board uses SCADA infrastructure 
+           to automate the extraction, treatment, and distribution of potable 
+           water from the Shire River at Walker's Ferry to the city of Blantyre. 
+           SCADA systems continually monitor raw water intake pumps, chemical 
+           dosing rates, filter beds, and high-pressure booster stations. When 
+           river turbidity spikes after heavy rainfall, the SCADA network 
+           automatically adjusts coagulation dosing meters and regulates intake 
+           valve positions to maintain water safety standards while avoiding 
+           pump cavitation. Real-time telemetry across booster stations and 
+           service reservoirs ensures balanced hydraulic pressure across high-
+           elevation distribution zones, preventing pipe bursts and detecting 
+           major distribution line leaks instantly. </p>
+
+        <div id="water-telemetry" class="telemetry-card">
+          <h3>BWB Walker's Ferry Station Live SCADA Telemetry</h3>
+  
+          <div id="water-telemetry-data" class="telemetry-grid">
+          <p class="loading-text">Polling BWB SCADA telemetry...</p>
+          </div>
+  
+          <button id="refresh-water-telemetry" class="btn">Poll Water Telemetry</button>
+        </div>
+
         <h3>4. Hybrid Control and Step-by-Step SCADA Implementation</h3>
         <p>Modern SCADA deployments offer flexible hybrid control frameworks 
           that balance automated rule execution with human oversight. Facilities 
