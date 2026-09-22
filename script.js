@@ -53,4 +53,61 @@ document.addEventListener('DOMContentLoaded', () => {
       contactForm.reset();
     }
   });
+
+  // --- Mobile Navigation Toggle Logic ---
+  const navToggle = document.getElementById('nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  const menuLinks = navLinks ? navLinks.querySelectorAll('a') : [];
+
+  const closeMenu = () => {
+    if (navLinks && navToggle) {
+      navLinks.classList.remove('active');
+      navToggle.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }
+  };
+
+  const openMenu = () => {
+    if (navLinks && navToggle) {
+      navLinks.classList.add('active');
+      navToggle.classList.add('open');
+      navToggle.setAttribute('aria-expanded', 'true');
+    }
+  };
+
+  if (navToggle && navLinks) {
+    // Toggle menu state on button click
+    navToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+      if (isExpanded) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    });
+
+    // Close menu when clicking any navigation link
+    menuLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+
+    // Close menu when clicking outside the navigation drawer
+    document.addEventListener('click', (event) => {
+      const isClickInside = navLinks.contains(event.target) || navToggle.contains(event.target);
+      if (!isClickInside && navLinks.classList.contains('active')) {
+        closeMenu();
+      }
+    });
+
+    // Close menu on pressing the Escape key
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeMenu();
+        navToggle.focus();
+      }
+    });
+  }
 });
