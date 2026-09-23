@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (savedTheme) {
     document.documentElement.setAttribute('data-theme', savedTheme);
   } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    document.documentElement.setAttribute('data-theme', dark);
+    document.documentElement.setAttribute('data-theme', 'dark');
   }
 
   themeToggle.addEventListener('click', () => {
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
         navToggle.focus();
       }
     });
-  }s
+  }
 
   const fetchBwbWaterTelemetry = async () => {
     const container = document.getElementById('water-telemetry-data');

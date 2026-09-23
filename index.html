@@ -4,19 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tamanda J. T. Kamoto - Portfolio</title>
+  <link rel="preload" as="image" href="hero-image.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
     <header class="hero-header">
+    <img 
+    src="hero-image.webp" 
+    alt="Tamanda Kamoto" 
+    class="hero-bg-img" 
+    fetchpriority="high" 
+    decoding="sync"
+    s>
     <div class="hero-overlay">
       <h1>Tamanda Jenifer Theana Kamoto</h1>
       <p class="tagline">Graduating Electronics & Computer Engineer<br>
                          (Open to work opportunities)</p>
 
-      <!-- Mobile Navigation Toggle Button -->
-<button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
-  <span class="hamburger"></span>
-</button>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span class="hamburger"></span>
+      </button>
       
       <nav class="nav-links" aria-label="Navigation Menu">
         <ul>
@@ -426,6 +434,5 @@
     <p>2026 - Tamanda J. T. Kamoto</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
